@@ -25,7 +25,7 @@ The second R file is the cacheSolve.
         The process consists of returning the inverse from the cache if that is valid.
         The function saves computational time bt storing the inverse
 
-To test the function first please enter the line 
+To test the function first please enter the line {
         my.env <- new.env() 
 Create a test matrix
         x <- matrix(c(1,0,2,3,0,-2,1,0,2),nrow=3)
@@ -50,5 +50,5 @@ R is getting cached data
 
 To test the accuracy of the inversion, set y <-cacheSolve(x)
 cacheSolve(y) should yield x 
-
+}
 Thank you.
