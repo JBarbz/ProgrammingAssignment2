@@ -42,15 +42,15 @@ However, it first checks to see if the mean has already been calculated. If so, 
 the cache and skips the computation. Otherwise, it calculates the mean of the data and sets the value 
 of the mean in the cache via the setmean function.
 
-        ##cachemean <- function(x, ...) {
-                ##m <- x$getmean()
-                ##if(!is.null(m)) {
-                ##        message("getting cached data")
-                ##        return(m)
-                ##}
-                ##data <- x$get()
-                ##m <- mean(data, ...)
-                ##x$setmean(m)
-                ##m
-        ##}
+        cachemean <- function(x, ...) {
+                m <- x$getmean()
+                if(!is.null(m)) {
+                        message("getting cached data")
+                        return(m)
+                }
+                data <- x$get()
+                #m <- mean(data, ...)
+                x$setmean(m)
+                m
+        }
 
