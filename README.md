@@ -26,27 +26,27 @@ The second R file is the cacheSolve.
         The function saves computational time bt storing the inverse
 
 To test the function first please enter the line 
-my.env <- new.env() 
+        my.env <- new.env() 
 Create a test matrix
-x <- matrix(c(1,0,2,3,0,-2,1,0,2),nrow=3)
+        x <- matrix(c(1,0,2,3,0,-2,1,0,2),nrow=3)
 check x
-    [,1] [,2] [,3]
-[1,]    1    3    1
-[2,]    0    0    0
-[3,]    2   -2    2
+                [,1] [,2] [,3]
+        [1,]    1    3    1
+        [2,]    0    0    0
+        [3,]    2   -2    2
 cacheSolve (x)
 run it twice - first time, it should get the computed inverse 
-        [,1]       [,2]        [,3]
-[1,] -0.07317073 -1.6585366  1.46341463
-[2,] -0.02439024  0.7804878 -0.51219512
-[3,]  0.09756098 -0.1219512  0.04878049
+                [,1]       [,2]        [,3]
+        [1,] -0.07317073 -1.6585366  1.46341463
+        [2,] -0.02439024  0.7804878 -0.51219512
+        [3,]  0.09756098 -0.1219512  0.04878049
 and the second time onwards, it should bring from cache.
 
 R is getting cached data
-            [,1]       [,2]        [,3]
-[1,] -0.07317073 -1.6585366  1.46341463
-[2,] -0.02439024  0.7804878 -0.51219512
-[3,]  0.09756098 -0.1219512  0.04878049
+                    [,1]       [,2]        [,3]
+        [1,] -0.07317073 -1.6585366  1.46341463
+        [2,] -0.02439024  0.7804878 -0.51219512
+        [3,]  0.09756098 -0.1219512  0.04878049
 
 To test the accuracy of the inversion, set y <-cacheSolve(x)
 cacheSolve(y) should yield x 
